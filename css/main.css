@@ -1,3 +1,35 @@
+h1,
+h2 {
+  font-family: "Genos", system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 
+body {
+  font-family: "Roboto Flex", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+.button,
+.nav,
+.tag,
+.price {
+  font-family: "Genos", system-ui, sans-serif;
+}
+
+.button {
+  font-family: "Genos", system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.tag,
+.label {
+  font-family: "Genos", system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+}
 
 /*# sourceMappingURL=main.css.map */

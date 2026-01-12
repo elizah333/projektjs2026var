@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"main.css"}
+{"version":3,"sourceRoot":"","sources":["../sass_multiverse/_base.scss","../sass_multiverse/_variables.scss","../sass_multiverse/_components.scss"],"names":[],"mappings":"AAAA;AAAA;EAEE,aCFW;EDGX;EACA;EACA;;;AAEF;EACE,aCPU;EDQV;;;AETF;AAAA;AAAA;AAAA;EAIE,aDJW;;;ACMb;EACE,aDPW;ECQX;EACA;EACA;;;AAEF;AAAA;EAEE,aDdW;ECeX;EACA","file":"main.css"}
