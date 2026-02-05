@@ -1,25 +1,415 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Best Site Ever</title>
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico?v=2" />
+    <title>Best Berry Ever</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico?v=3" />
     <meta
       name="description"
-      content="This page shows how the highest quality of work looks like."
+      content="Berry encyclopedia for eduction and inspiration. Here you can find your favorite berry for whatever use you want."
     />
     <link rel="stylesheet" href="../CSS/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Amarante&family=Genos:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Herr+Von+Muellerhoff&family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-10..0,25..151,100..1000,-200..150,27..175,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760&display=swap"
+      rel="stylesheet"
       rel="stylesheet"
     />
   </head>
   <body>
-    <h1>HEJSAN this is how i feel HIIIgG</h1>
-    <p>hello im normalI THINK</p>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <div class="hero">
+      <h1 id="herotitle">Berries</h1>
+      <img src="../images/berry.png" alt="red berries" />
+    </div>
+    <div class="shifters">
+      <div class="speech-card"></div>
+      <div class="color-card">
+        <input type="checkbox" id="theme-toggle" />
+        <label for="theme-toggle"></label>
+      </div>
+    </div>
+    <div class="berries-bar" aria-hidden="true">
+      <div class="berries-bar__track">
+        <span>Berries</span><span>Berries</span><span>Berries</span><span>Berries</span
+        ><span>Berries</span> <span>Berries</span><span>Berries</span><span>Berries</span
+        ><span>Berries</span><span>Berries</span> <span>Berries</span><span>Berries</span
+        ><span>Berries</span><span>Berries</span><span>Berries</span> <span>Berries</span
+        ><span>Berries</span><span>Berries</span><span>Berries</span><span>Berries</span
+        ><span>Berries</span>
+      </div>
+    </div>
+    <div class="header-group">
+      <div class="topbar" id="topbar">
+        <p>Download our app to get 67% discount on all orders!</p>
+        <button id="closetopbar" aria-label="Close advertisement">&#128941;</button>
+      </div>
+      <header aria-label="Site header">
+        <nav class="site-nav" aria-label="Main navigation">
+          <button
+            class="sidebar-burger"
+            type="button"
+            aria-controls="mobileSidebar"
+            aria-expanded="false"
+            aria-label="Open sidebar"
+          >
+            &#128898;
+          </button>
+          <div class="sidebar-overlay" id="mobileSidebar" hidden>
+            <button class="sidebar-close" type="button" aria-label="Close sidebar">
+              &#128941;
+            </button>
+
+            <aside class="sidebar-overlay__content" aria-label="Sidebar navigation">
+              <details>
+                <summary>About & Guides</summary>
+                <ul>
+                  <li><a href="#">Our Story</a></li>
+                  <li><a href="#">Berries Care Guide</a></li>
+                  <li><a href="#">Foraging Basics</a></li>
+                  <li><a href="#">Sustainability</a></li>
+                  <li><a href="#">FAQs</a></li>
+                </ul>
+              </details>
+
+              <h3>Berry Families</h3>
+              <ul>
+                <li><a href="#true">True berries</a></li>
+                <li><a href="#botanical">Botanical berries</a></li>
+                <li><a href="#aggregate">Aggregate berries</a></li>
+                <li><a href="#hybrid">Hybrid berries</a></li>
+                <li><a href="#regional">Regional berries</a></li>
+              </ul>
+
+              <h3>Browse by Taste</h3>
+              <ul>
+                <li><a href="#sweet">Sweet & Juicy</a></li>
+                <li><a href="#tart">Bright & Tart</a></li>
+                <li><a href="#floral">Floral & Perfumed</a></li>
+                <li><a href="#deep">Deep & Jammy</a></li>
+                <li><a href="#wild">Wild & Resinous</a></li>
+              </ul>
+
+              <h3>Use Cases</h3>
+              <ul>
+                <li><a href="#snack">Snackable</a></li>
+                <li><a href="#bake">Baking Stars</a></li>
+                <li><a href="#jam">Jam & Preserves</a></li>
+                <li><a href="#drink">Smoothies & Drinks</a></li>
+                <li><a href="#savory">Savory Pairings</a></li>
+              </ul>
+
+              <details>
+                <summary>Season & Climate</summary>
+                <ul>
+                  <li><a href="#spring">Spring picks</a></li>
+                  <li><a href="#summer">Summer peak</a></li>
+                  <li><a href="#autumn">Autumn harvest</a></li>
+                  <li><a href="#winter">Frozen favorites</a></li>
+                  <li><a href="#nordic">Nordic hardy berries</a></li>
+                </ul>
+              </details>
+
+              <details>
+                <summary>Kitchen Skills</summary>
+                <ul>
+                  <li><a href="#freeze">Freeze without mush</a></li>
+                  <li><a href="#jamset">How to get jam to set</a></li>
+                  <li><a href="#syrup">Quick berry syrup</a></li>
+                  <li><a href="#compote">Fast compote</a></li>
+                  <li><a href="#pairing">Flavor pairing map</a></li>
+                </ul>
+              </details>
+
+              <details>
+                <summary>Safety & Notes</summary>
+                <ul>
+                  <li><a href="#allergy">Allergy notes</a></li>
+                  <li><a href="#pets">Berries & pets</a></li>
+                  <li><a href="#forage-safety">Foraging safety</a></li>
+                  <li><a href="#pesticide">Washing & pesticide tips</a></li>
+                </ul>
+              </details>
+            </aside>
+          </div>
+
+          <ul class="nav-links">
+            <li><a href="#">True berries</a></li>
+            <li><a href="#">Botanical berries</a></li>
+            <li><a href="#">Aggregate berries</a></li>
+            <li><a href="#">Hybrid berries</a></li>
+            <li><a href="#">Regional berries</a></li>
+          </ul>
+          <button
+            class="nav-burger"
+            type="button"
+            aria-controls="mobileNav"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <span aria-hidden="true">&#9776;</span>
+          </button>
+          <div class="nav-overlay" id="mobileNav" hidden>
+            <button class="nav-close" type="button" aria-label="Close menu">
+              &#128941;
+            </button>
+
+            <ul class="nav-mobile-links">
+              <li><a href="#">True berries</a></li>
+              <li><a href="#">Botanical berries</a></li>
+              <li><a href="#">Aggregate berries</a></li>
+              <li><a href="#">Hybrid berries</a></li>
+              <li><a href="#">Regional berries</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div class="subheader">
+        <p>Unsure on what berry you are looking for? Try this <a href="#">quiz</a>!</p>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <aside class="sidebar-left" aria-label="Sidebar navigation">
+        <details>
+          <summary>About & Guides</summary>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Berries Care Guide</a></li>
+            <li><a href="#">Foraging Basics</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </details>
+        <h3>Berry Families</h3>
+        <ul>
+          <li><a href="#true">True berries</a></li>
+          <li><a href="#botanical">Botanical berries</a></li>
+          <li><a href="#aggregate">Aggregate berries</a></li>
+          <li><a href="#hybrid">Hybrid berries</a></li>
+          <li><a href="#regional">Regional berries</a></li>
+        </ul>
+
+        <h3>Browse by Taste</h3>
+        <ul>
+          <li><a href="#sweet">Sweet & Juicy</a></li>
+          <li><a href="#tart">Bright & Tart</a></li>
+          <li><a href="#floral">Floral & Perfumed</a></li>
+          <li><a href="#deep">Deep & Jammy</a></li>
+          <li><a href="#wild">Wild & Resinous</a></li>
+        </ul>
+
+        <h3>Use Cases</h3>
+        <ul>
+          <li><a href="#snack">Snackable</a></li>
+          <li><a href="#bake">Baking Stars</a></li>
+          <li><a href="#jam">Jam & Preserves</a></li>
+          <li><a href="#drink">Smoothies & Drinks</a></li>
+          <li><a href="#savory">Savory Pairings</a></li>
+        </ul>
+
+        <details>
+          <summary>Season & Climate</summary>
+          <ul>
+            <li><a href="#spring">Spring picks</a></li>
+            <li><a href="#summer">Summer peak</a></li>
+            <li><a href="#autumn">Autumn harvest</a></li>
+            <li><a href="#winter">Frozen favorites</a></li>
+            <li><a href="#nordic">Nordic hardy berries</a></li>
+          </ul>
+        </details>
+        <details>
+          <summary>Kitchen Skills</summary>
+          <ul>
+            <li><a href="#freeze">Freeze without mush</a></li>
+            <li><a href="#jamset">How to get jam to set</a></li>
+            <li><a href="#syrup">Quick berry syrup</a></li>
+            <li><a href="#compote">Fast compote</a></li>
+            <li><a href="#pairing">Flavor pairing map</a></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Safety & Notes</summary>
+          <ul>
+            <li><a href="#allergy">Allergy notes</a></li>
+            <li><a href="#pets">Berries & pets</a></li>
+            <li><a href="#forage-safety">Foraging safety</a></li>
+            <li><a href="#pesticide">Washing & pesticide tips</a></li>
+          </ul>
+        </details>
+      </aside>
+      <main>
+        <section id="start">
+          <h1>hello there</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+        </section>
+        <section id="middle">
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+        </section>
+        <section id="end">
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+          <h1>hello there</h1>
+        </section>
+      </main>
+      <aside class="sidebar-right" aria-label="Sidebar links">
+        <ul>
+          <li><a href="#start">Start</a></li>
+          <li><a href="#middle">Middle</a></li>
+          <li><a href="#end">End</a></li>
+        </ul>
+      </aside>
+    </div>
+    <section class="signup-section">
+      <h2>Be the First to Know</h2>
+      <p>
+        Stay up to date with our new cup styles and seasonal collections. Plus, enjoy 21%
+        off your first order!
+      </p>
+      <form class="signup-form" aria-label="Email sign-up">
+        <input
+          type="email"
+          placeholder="Enter your email address"
+          aria-label="Email address"
+        />
+        <button type="submit">Sign Up</button>
+      </form>
+    </section>
+    <section class="info-columns">
+      <div class="info-grid">
+        <div>
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Shipping & Delivery</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Warranty</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Gift Sets</a></li>
+            <li><a href="#">Special Offers</a></li>
+            <li><a href="#">Outlet</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Community</h3>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Corporate</h3>
+          <ul>
+            <li><a href="#">Business Sales</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Settings</a></li>
+            <li><a href="#">Legal Notice</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Your Privacy Choices</a>
+        <a href="#">California Transparency in Supply Chains Act</a>
+        <a href="#"> Community Participation Guidelines</a>
+      </p>
+      <div class="legal">
+        <p>
+          ©2025 Berries Co. All rights reserved. Berries® is a registered trademark of
+          Berries Co. AB.
+        </p>
+      </div>
+    </footer>
     <script type="module" src="../js/main.js"></script>
   </body>
 </html>

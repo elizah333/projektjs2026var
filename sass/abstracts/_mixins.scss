@@ -1,0 +1,108 @@
+//IPAD
+@media (max-width: 1100px) {
+  .page-wrapper {
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr) !important;
+    gap: var(--space-4);
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    align-items: start;
+    overflow: visible;
+    .sidebar-right {
+      display: none;
+    }
+  }
+  .nav-links {
+    gap: 6px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: clamp(3px, 0.6vw, 8px);
+  }
+
+  .nav-links a {
+    flex: 1 1 0;
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+    text-align: center;
+
+    padding: 0.14rem 0.22rem;
+    font-size: 0.76rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  .nav-links li {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .sidebar-left {
+    position: sticky !important;
+    top: 140px;
+    min-height: 0;
+    overflow: auto !important;
+    overflow-x: auto;
+    padding: var(--space-2);
+    max-height: calc(100vh - 140px);
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+//PHONE
+@media (max-width: 800px) {
+  .page-wrapper {
+    display: block !important;
+    width: 100%;
+    margin: 0;
+    padding-inline: 16px;
+    gap: 0;
+    justify-items: stretch;
+  }
+
+  .sidebar-left,
+  .sidebar-right {
+    display: none;
+  }
+}
+@mixin box {
+  border: 2px solid var(--lines);
+  border-bottom: 7px solid var(--lines);
+  border-left: 6px solid var(--lines);
+  border-radius: 8px;
+  color: var(--lines);
+  font-family: $font-genos;
+  font-weight: 700;
+}
+@mixin button {
+  border: 2px solid var(--lines);
+  border-radius: 8px;
+  color: var(--lines);
+  background-color: var(--muted);
+  cursor: pointer;
+  font-family: $font-genos;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: var(--bg);
+    color: var(--lines);
+    border-color: var(--lines);
+  }
+
+  &:active {
+    background-color: var(--primary);
+    color: var(--lines);
+    border-color: var(--lines);
+  }
+}
+@mixin clamp {
+  gap: clamp(6px, 0.7vw, var(--space-5));
+  font-size: clamp(0.76rem, 0.55vw + 0.35rem, 1.05rem);
+}

@@ -1,0 +1,35 @@
+h1,
+h2 {
+  font-family: $font-genos, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body {
+  font-family: $font-body;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--lines);
+  background-color: var(--bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+#herotitle {
+  font-family: $font-display;
+  letter-spacing: normal;
+  margin: 4px;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 6rem;
+  text-align: center;
+  transform: scale(1.5, 1);
+}

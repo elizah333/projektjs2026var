@@ -1,0 +1,13 @@
+.page-wrapper {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr) minmax(200px, 260px);
+  gap: var(--space-4);
+  max-width: 1600px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 100px;
+}
+main {
+  margin: 0 auto;
+  padding: var(--space-4);
+}

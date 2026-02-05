@@ -1,0 +1,33 @@
+footer {
+  display: block;
+  background-color: var(--muted);
+  color: var(--text);
+  border-top: 1px solid var(--lines);
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 400;
+  padding-top: 10px;
+}
+
+footer a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0 var(--space-2);
+}
+
+footer a:not(:last-child) {
+  border-right: 1px solid var(--lines);
+}
+
+footer a:hover,
+footer a:focus {
+  text-decoration: underline;
+}
+.legal {
+  font-size: 0.7rem;
+  background-color: var(--lines);
+  color: var(--primary);
+  padding-bottom: 1.2rem;
+  padding-top: 5px;
+  margin-top: 10px;
+}

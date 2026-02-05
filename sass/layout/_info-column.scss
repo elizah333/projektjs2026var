@@ -1,0 +1,41 @@
+.info-columns {
+  background-color: var(--muted);
+  color: var(--lines);
+  padding: var(--space-5) var(--space-3);
+  margin-bottom: 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-5);
+  margin: 0 auto;
+}
+.info-columns h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.info-columns ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.info-columns li {
+  margin-bottom: 6px;
+}
+.info-columns a {
+  color: var(--lines);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.info-columns a:hover,
+.info-columns a:focus {
+  text-decoration: underline;
+}
+

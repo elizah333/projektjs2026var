@@ -1,0 +1,29 @@
+$font-genos: 'Genos', system-ui, sans-serif;
+$font-body: 'Roboto Flex', system-ui, sans-serif;
+$font-display: 'Herr Von Muellerhoff', italic, sans-serif;
+
+:root {
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+}
+
+// html[data-theme='dark'] {
+//  --bg: #f4e6c1;
+//  --purple: #9a81b7;
+//  --muted: #f4d18a;
+//  --primary: #b7d06c;
+//  --lines: #231c1c;
+//  --pink: #ec98bb;
+// }
+
+html {
+  --bg: #f4e6c1;
+  --purple: #9a81b7;
+  --muted: #f4d18a;
+  --primary: #b7d06c;
+  --lines: #231c1c;
+  --pink: #ec98bb;
+}

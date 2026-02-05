@@ -1,0 +1,62 @@
+.signup-section {
+  background-color: var(--bg);
+  text-align: center;
+  @include box;
+  padding: 1rem;
+  width: min(1200px, 100% - 2rem);
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.signup-section h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.signup-section p {
+  font-size: 0.9rem;
+  margin-bottom: var(--space-3);
+  max-width: 700px;
+  margin-inline: auto;
+}
+.signup-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.signup-form input,
+.signup-form button {
+  flex: 1;
+  height: 52px;
+  padding: 0.4rem 0.8rem;
+  font-weight: 500;
+  outline: none;
+}
+.signup-form input {
+  border: 2px solid var(--lines);
+  border-radius: 8px;
+  color: var(--lines);
+  background-color: var(--muted);
+  cursor: pointer;
+  font-family: $font-genos;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.signup-form button {
+  @include button;
+  font-weight: 700;
+  font-size: 1rem;
+}
+@media (max-width: 800px) {
+  .signup-form {
+  width: 100%;
+  input {
+@include clamp  }
+}
+}

@@ -1,0 +1,25 @@
+.sidebar-right {
+  position: sticky;
+  top: 140px;
+  align-self: start;
+  overflow-y: auto;
+  padding: var(--space-2);
+}
+.sidebar-right a {
+  border-left: 3px solid var(--lines);
+  padding: 5px 10px;
+  background-color: var(--lines);
+  color: var(--primary);
+}
+.sidebar-right a.active {
+  border-left: 3px solid var(--lines);
+  background-color: var(--primary);
+  color: var(--lines);
+}
+.sidebar-right a:hover {
+  text-decoration: underline;
+}
+.sidebar-right li {
+  text-align: start;
+  margin: 5px;
+}

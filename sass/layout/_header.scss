@@ -1,0 +1,74 @@
+header {
+  background-color: var(--bg);
+  height: 70px;
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+  border-bottom: 1px solid var(--lines);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-group {
+  background-color: var(--bg);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+.subheader {
+  background-color: var(--muted);
+  color: var(--text);
+  border-bottom: 1px solid var(--lines);
+  padding: 3px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  @include clamp;
+
+  a {
+    color: var(--purple);
+    &:active {
+      color: var(--primary);
+    }
+  }
+}
+
+.topbar {
+  background: var(--purple);
+  color: var(--lines);
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 8px var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-100%);
+  @include clamp;
+}
+.topbar button {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  font-size: 0.9rem;
+  font-weight: 900;
+  border: 1px solid var(--lines);
+  background-color: var(--pink);
+  cursor: pointer;
+}
+.topbar.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+.topbar.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+  height: 0;
+  border: none;
+  box-shadow: none;
+  pointer-events: none;
+}
