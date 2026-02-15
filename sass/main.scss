@@ -6,8 +6,14 @@
 @import 'base/typography';
 @import 'base/animations';
 
-@import 'components/buttons';
+@import 'components/theme';
+@import 'components/lang';
+@import 'components/list';
+@import 'components/temp';
 @import 'components/signup';
+@import 'components/slideshow';
+@import 'components/gallery';
+@import 'components/gate';
 
 @import 'layout/content';
 @import 'layout/footer';

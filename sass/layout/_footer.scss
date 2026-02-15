@@ -1,7 +1,6 @@
 footer {
   display: block;
   background-color: var(--muted);
-  color: var(--text);
   border-top: 1px solid var(--lines);
   text-align: center;
   font-size: 0.85rem;
@@ -10,7 +9,6 @@ footer {
 }
 
 footer a {
-  color: var(--text);
   text-decoration: none;
   padding: 0 var(--space-2);
 }

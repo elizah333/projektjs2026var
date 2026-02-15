@@ -4,7 +4,6 @@ header {
   padding-left: var(--space-3);
   padding-right: var(--space-3);
   border-bottom: 1px solid var(--lines);
-  box-shadow: var(--shadow-sm);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,47 +16,46 @@ header {
   width: 100%;
 }
 .subheader {
-  background-color: var(--muted);
-  color: var(--text);
+  background-color: var(--lines);
   border-bottom: 1px solid var(--lines);
   padding: 3px;
   font-weight: 600;
+  color: var(--white);
   font-size: 1.1rem;
   text-align: center;
   @include clamp;
 
   a {
-    color: var(--purple);
-    &:active {
-      color: var(--primary);
+    color: var(--primary);
+    &:hover {
+      color: var(--color);
     }
   }
 }
 
 .topbar {
-  background: var(--purple);
-  color: var(--lines);
-  border-bottom: 1px solid var(--border);
+  background: var(--muted);
+  border-bottom: 1px solid var(--lines);
   font-weight: 600;
   font-size: 0.9rem;
-  padding: 8px var(--space-3);
+  padding: 8px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-3);
   text-align: center;
-  box-shadow: var(--shadow-sm);
   transform: translateY(-100%);
   @include clamp;
 }
 .topbar button {
   width: 20px;
   height: 20px;
+  font-size: 1.2rem;
+  line-height: 20px;
   border-radius: 100%;
-  font-size: 0.9rem;
   font-weight: 900;
   border: 1px solid var(--lines);
-  background-color: var(--pink);
+  background-color: var(--color);
   cursor: pointer;
 }
 .topbar.show {
@@ -69,6 +67,5 @@ header {
   opacity: 0;
   height: 0;
   border: none;
-  box-shadow: none;
   pointer-events: none;
 }

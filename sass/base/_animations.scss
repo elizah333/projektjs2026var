@@ -1,14 +1,14 @@
 @keyframes berriesCycle {
   0% {
-    background: var(--pink);
+    background: var(--link-blue);
   }
   33% {
-    background: var(--primary);
+    background: var(--color);
   }
   66% {
-    background: var(--purple);
+    background: var(--link-pink);
   }
   100% {
-    background: var(--pink);
+    background: var(--link-blue);
   }
 }

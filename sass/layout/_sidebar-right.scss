@@ -9,12 +9,11 @@
   border-left: 3px solid var(--lines);
   padding: 5px 10px;
   background-color: var(--lines);
-  color: var(--primary);
+  color: var(--white);
 }
 .sidebar-right a.active {
   border-left: 3px solid var(--lines);
-  background-color: var(--primary);
-  color: var(--lines);
+  background-color: var(--color);
 }
 .sidebar-right a:hover {
   text-decoration: underline;

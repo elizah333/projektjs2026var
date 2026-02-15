@@ -1,0 +1,132 @@
+.gallery-container {
+  position: relative;
+  width: 100%;
+  font-family: $font-genos;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.gallerySlide {
+  display: none;
+}
+
+.galleryPrev,
+.galleryNext {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: var(--space-2);
+  color: var(--white);
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 0 8px 8px 0;
+  user-select: none;
+}
+
+.galleryNext {
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}
+.galleryPrev {
+  left: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.galleryPrev:hover,
+.galleryNext:hover {
+  background-color: var(--lines);
+}
+
+.galleryDot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background-color: var(--link-blue);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active,
+.galleryDot:hover {
+  background-color: var(--color);
+}
+
+.galleryFade {
+  animation-name: galleryFade;
+  animation-duration: 1.5s;
+}
+
+@keyframes galleryFade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.gallerySlide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.galleryText {
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: clamp(1rem, 1.2vw + 0.8rem, 2rem);
+  border: 5px solid var(--muted);
+  align-content: center;
+  background-color: var(--white);
+  padding: 0.5rem;
+}
+.galleryText3Border {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: var(--muted);
+  padding: 5px;
+  clip-path: polygon(25% 0, 100% 0, 75% 100%, 0 100%);
+  display: grid;
+}
+
+.galleryText3 {
+  width: 100%;
+  height: 100%;
+  font-size: clamp(1rem, 1.2vw + 0.8rem, 2rem);
+  background-color: var(--white);
+  padding: 1rem;
+  clip-path: inherit;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.galleryText2Border {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(380px, 50%);
+  aspect-ratio: 1 / 1;
+  background: var(--muted);
+  padding: 5px;
+  clip-path: circle(50%);
+}
+
+.galleryText2 {
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  clip-path: inherit;
+  padding: 1rem;
+  font-size: clamp(1rem, 1.2vw + 0.8rem, 2rem);
+  display: grid;
+  place-items: center;
+}

@@ -2,9 +2,10 @@
 @media (max-width: 1100px) {
   .page-wrapper {
     grid-template-columns: minmax(220px, 280px) minmax(0, 1fr) !important;
-    gap: var(--space-4);
+    gap: 2px !important;
+    max-width: 100%;
     border-right: none;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--lines);
     height: auto;
     width: 100%;
     margin: 0 auto;
@@ -14,6 +15,10 @@
       display: none;
     }
   }
+  main {
+    padding: 1rem !important;
+  }
+
   .nav-links {
     gap: 6px;
     flex-wrap: nowrap;
@@ -50,17 +55,26 @@
     overflow-x: auto;
     padding: var(--space-2);
     max-height: calc(100vh - 140px);
+    max-width: 100%;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
   }
 }
 //PHONE
 @media (max-width: 800px) {
+  #berrylab {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  main {
+    padding: 0 !important;
+  }
   .page-wrapper {
     display: block !important;
     width: 100%;
     margin: 0;
-    padding-inline: 16px;
+    padding-inline: 1px;
     gap: 0;
     justify-items: stretch;
   }
@@ -69,36 +83,50 @@
   .sidebar-right {
     display: none;
   }
+  .topbar p {
+    font-size: clamp(0.56rem, 0.55vw + 0.35rem, 1.05rem);
+  }
 }
+
+@media (max-width: 1400px) and (min-width: 1101px) {
+  .page-wrapper {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-inline: var(--space-2) !important;
+
+    grid-template-columns:
+      minmax(200px, 240px)
+      minmax(0, 1fr)
+      minmax(110px, 150px) !important;
+
+    gap: var(--space-3) !important;
+  }
+}
+
 @mixin box {
   border: 2px solid var(--lines);
   border-bottom: 7px solid var(--lines);
   border-left: 6px solid var(--lines);
-  border-radius: 8px;
-  color: var(--lines);
+  border-radius: var(--space-1);
   font-family: $font-genos;
   font-weight: 700;
 }
 @mixin button {
   border: 2px solid var(--lines);
-  border-radius: 8px;
-  color: var(--lines);
+  border-radius: var(--space-1);
   background-color: var(--muted);
   cursor: pointer;
   font-family: $font-genos;
   font-weight: 600;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
 
   &:hover {
-    background-color: var(--bg);
-    color: var(--lines);
+    background-color: var(--primary);
     border-color: var(--lines);
   }
 
   &:active {
-    background-color: var(--primary);
-    color: var(--lines);
+    background-color: var(--color);
     border-color: var(--lines);
   }
 }

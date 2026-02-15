@@ -5,9 +5,16 @@
   max-width: 1600px;
   margin: 0 auto;
   text-align: center;
-  padding-bottom: 100px;
+  padding-bottom: 75px;
 }
 main {
   margin: 0 auto;
   padding: var(--space-4);
+}
+.content-block__figure {
+  width: 50%;
+  float: right;
+  margin: 1rem;
+  background-color: var(--color);
+  @include box;
 }

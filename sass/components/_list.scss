@@ -1,0 +1,141 @@
+#berrylab {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--lines);
+  color: var(--white);
+  border-radius: var(--space-1);
+  display: flex;
+  flex-wrap: wrap;
+  h2 {
+    width: 100%;
+  }
+}
+
+#berryType,
+#berrySort {
+  background-color: var(--lines);
+  color: var(--white);
+  border-radius: var(--space-1);
+  border: 2px solid var(--white);
+  outline: none;
+  padding: 0px 4px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+#berryName,
+#berrySearch {
+  background-color: var(--white);
+  color: var(--lines);
+  border-radius: var(--space-1);
+  border: 2px solid var(--white);
+  outline: none;
+}
+.berry-empty {
+  padding: 1rem;
+  width: 100%;
+}
+.berry-form {
+  padding-left: 1rem;
+  button {
+    line-height: 21px;
+    padding: 0px 4px;
+    background-color: var(--lines);
+    color: var(--white);
+    border-radius: var(--space-1);
+    border: 2px solid var(--white);
+    margin-right: 10px;
+  }
+}
+.berry-form button:active {
+  background-color: var(--color);
+}
+
+.berry-form button:hover {
+  background-color: var(--color);
+}
+.berry-list {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+
+  li {
+    width: 75%;
+    display: inline-block;
+    text-align: center;
+    margin: 2px 1rem;
+    font-family: $font-genos;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--lines);
+    background-color: var(--primary);
+    border: 2px solid var(--white);
+  }
+}
+@media (max-width: 1300px) {
+  .page-wrapper {
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr) minmax(10px, 10px);
+  }
+  #berrylab {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      'title title'
+      'form tools'
+      'empty empty'
+      'list list';
+  }
+
+  #berrylab h2 {
+    grid-area: title;
+    margin: 0;
+    width: auto;
+  }
+
+  .berry-form {
+    grid-area: form;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0;
+    flex-wrap: wrap;
+  }
+
+  .berry-tools {
+    grid-area: tools;
+  }
+
+  #berryName,
+  #berrySearch,
+  #berryType,
+  #berrySort {
+    min-width: 0;
+    flex: 1 1 0;
+    max-width: 100%;
+  }
+
+  .berry-msg {
+    flex-basis: 100%;
+    margin: 0;
+  }
+  .berry-empty {
+    grid-area: empty;
+  }
+  .berry-list {
+    grid-area: list;
+  }
+}
+.berry-list li {
+  position: relative;
+  padding-right: 90px;
+  padding-left: 90px;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+
+.berry-list li button[data-action='remove'] {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}

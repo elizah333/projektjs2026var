@@ -10,20 +10,27 @@ $font-display: 'Herr Von Muellerhoff', italic, sans-serif;
   --space-5: 48px;
 }
 
-// html[data-theme='dark'] {
-//  --bg: #f4e6c1;
-//  --purple: #9a81b7;
-//  --muted: #f4d18a;
-//  --primary: #b7d06c;
-//  --lines: #231c1c;
-//  --pink: #ec98bb;
-// }
+html[data-theme='dark'] {
+  --bg: #AECBB9;
+  --text: #3c5757;
+  --muted: #FDB4AE;
+  --primary: #fad4b4;
+  --lines: #8D5F60;
+  --color: #fd7c73;
+  --white: #ffeedb;
+  --link-pink: #e67686;
+  --link-blue: #fd9086;
+}
+
 
 html {
-  --bg: #f4e6c1;
-  --purple: #9a81b7;
-  --muted: #f4d18a;
-  --primary: #b7d06c;
-  --lines: #231c1c;
-  --pink: #ec98bb;
+--bg: #f1e0ff;
+--text: #120a1a;
+--muted: #D2C2E6;
+--primary: #FBD0FB;
+--lines: #6d58b4;
+--color: #d98df0;
+--white: #f0f3ff;
+  --link-pink: #c084fc;
+  --link-blue: #8f85ff;
 }

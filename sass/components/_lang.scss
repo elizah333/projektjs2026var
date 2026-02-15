@@ -1,0 +1,22 @@
+#language-select {
+  position: absolute;
+  top: 14rem;
+  right: 9rem;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: var(--white);
+  color: var(--color);
+  border-radius: 60px;
+  border: 2px solid var(--color);
+  width: 80px;
+  height: 35px;
+  outline: none;
+}
+
+@media (max-width: 800px) {
+  #language-select {
+    position: absolute;
+    top: 8.5rem;
+    right: 1rem;
+  }
+}

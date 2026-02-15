@@ -15,35 +15,74 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Herr+Von+Muellerhoff&family=Roboto+Flex:opsz,slnt,wdth,wght,GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC@8..144,-10..0,25..151,100..1000,-200..150,27..175,323..603,25..135,649..854,-305..-98,560..788,416..570,528..760&display=swap"
       rel="stylesheet"
-      rel="stylesheet"
     />
   </head>
   <body>
-    <a href="#main" class="skip-link">Skip to main content</a>
+    <a href="#start" class="skip-link" data-i18n="skip">Skip to main content</a>
+    <div
+      id="entryGate"
+      class="entry-gate"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="gateTitle"
+    >
+      <div class="entry-gate__card">
+        <h2 id="gateTitle">Do you like berries?</h2>
+        <p id="gateMsg">Choose wisely.</p>
+
+        <div class="entry-gate__actions">
+          <button type="button" id="gateYes">Yes</button>
+          <button type="button" id="gateNo">No</button>
+        </div>
+      </div>
+    </div>
+
     <div class="hero">
       <h1 id="herotitle">Berries</h1>
       <img src="../images/berry.png" alt="red berries" />
-    </div>
-    <div class="shifters">
-      <div class="speech-card"></div>
-      <div class="color-card">
-        <input type="checkbox" id="theme-toggle" />
-        <label for="theme-toggle"></label>
+      <select id="language-select">
+        <option value="en">English</option>
+        <option value="sv">Svenska</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+      </select>
+      <div class="switch">
+        <input
+          id="language-toggle"
+          class="check-toggle check-toggle-round-flat"
+          type="checkbox"
+        />
+        <label for="language-toggle"></label>
+        <span class="on" data-i18n="purple">Purple</span>
+        <span class="off" data-i18n="green">Green</span>
       </div>
     </div>
     <div class="berries-bar" aria-hidden="true">
       <div class="berries-bar__track">
         <span>Berries</span><span>Berries</span><span>Berries</span><span>Berries</span
-        ><span>Berries</span> <span>Berries</span><span>Berries</span><span>Berries</span
+        ><span>Berries</span> <span> Berries</span><span>Berries</span><span>Berries</span
         ><span>Berries</span><span>Berries</span> <span>Berries</span><span>Berries</span
         ><span>Berries</span><span>Berries</span><span>Berries</span> <span>Berries</span
         ><span>Berries</span><span>Berries</span><span>Berries</span><span>Berries</span
-        ><span>Berries</span>
+        ><span>Berries</span> <span>Berries</span><span>Berries</span><span>Berries</span
+        ><span>Berries</span><span>Berries</span> <span> Berries</span><span>Berries</span
+        ><span>Berries</span><span>Berries</span><span>Berries</span> <span>Berries</span
+        ><span>Berries</span><span>Berries</span><span>Berries</span><span>Berries</span>
+        <span>Berries</span><span>Berries</span><span>Berries</span><span>Berries</span
+        ><span>Berries</span><span>Berries</span> <span>Berries</span><span>Berries</span
+        ><span>Berries</span><span>Berries</span><span>Berries</span> <span> Berries</span
+        ><span>Berries</span><span>Berries</span><span>Berries</span><span>Berries</span>
+        <span>Berries</span><span>Berries</span><span>Berries</span><span>Berries</span
+        ><span>Berries</span> <span>Berries</span><span>Berries</span><span>Berries</span
+        ><span>Berries</span><span>Berries</span><span>Berries</span><span>Berries</span>
+        <span>Berries</span><span>Berries</span><span>Berries</span><span>Berries</span
+        ><span>Berries</span> <span>Berries</span><span>Berries</span><span>Berries</span
+        ><span>Berries</span><span>Berries</span><span>Berries</span>
       </div>
     </div>
     <div class="header-group">
       <div class="topbar" id="topbar">
-        <p>Download our app to get 67% discount on all orders!</p>
+        <p data-i18n="discount">Download our app to get 67% discount on all orders!</p>
         <button id="closetopbar" aria-label="Close advertisement">&#128941;</button>
       </div>
       <header aria-label="Site header">
@@ -64,83 +103,119 @@
 
             <aside class="sidebar-overlay__content" aria-label="Sidebar navigation">
               <details>
-                <summary>About & Guides</summary>
+                <summary data-i18n="aboutGuides">About & Guides</summary>
                 <ul>
-                  <li><a href="#">Our Story</a></li>
-                  <li><a href="#">Berries Care Guide</a></li>
-                  <li><a href="#">Foraging Basics</a></li>
-                  <li><a href="#">Sustainability</a></li>
-                  <li><a href="#">FAQs</a></li>
+                  <li><a href="#" data-i18n="ourStory">Our Story</a></li>
+                  <li><a href="#" data-i18n="berriesCareGuide">Berries Care Guide</a></li>
+                  <li><a href="#" data-i18n="foragingBasics">Foraging Basics</a></li>
+                  <li><a href="#" data-i18n="sustainability">Sustainability</a></li>
+                  <li><a href="#" data-i18n="faqs">FAQs</a></li>
                 </ul>
               </details>
 
-              <h3>Berry Families</h3>
+              <h3 data-i18n="berryFamilies">Berry Families</h3>
               <ul>
-                <li><a href="#true">True berries</a></li>
-                <li><a href="#botanical">Botanical berries</a></li>
-                <li><a href="#aggregate">Aggregate berries</a></li>
-                <li><a href="#hybrid">Hybrid berries</a></li>
-                <li><a href="#regional">Regional berries</a></li>
+                <li><a href="#true" data-i18n="navTrue">True berries</a></li>
+                <li>
+                  <a href="#botanical" data-i18n="navBotanical">Botanical berries</a>
+                </li>
+                <li>
+                  <a href="#aggregate" data-i18n="navAggregate">Aggregate berries</a>
+                </li>
+                <li><a href="#hybrid" data-i18n="navHybrid">Hybrid berries</a></li>
+                <li><a href="#regional" data-i18n="navRegional">Regional berries</a></li>
               </ul>
 
-              <h3>Browse by Taste</h3>
+              <h3 data-i18n="browseByTaste">Browse by Taste</h3>
               <ul>
-                <li><a href="#sweet">Sweet & Juicy</a></li>
-                <li><a href="#tart">Bright & Tart</a></li>
-                <li><a href="#floral">Floral & Perfumed</a></li>
-                <li><a href="#deep">Deep & Jammy</a></li>
-                <li><a href="#wild">Wild & Resinous</a></li>
+                <li><a href="#sweet" data-i18n="tasteSweet">Sweet & Juicy</a></li>
+                <li><a href="#tart" data-i18n="tasteTart">Bright & Tart</a></li>
+                <li><a href="#floral" data-i18n="tasteFloral">Floral & Perfumed</a></li>
+                <li><a href="#deep" data-i18n="tasteDeep">Deep & Jammy</a></li>
+                <li><a href="#wild" data-i18n="tasteWild">Wild & Resinous</a></li>
               </ul>
 
-              <h3>Use Cases</h3>
+              <h3 data-i18n="useCases">Use Cases</h3>
               <ul>
-                <li><a href="#snack">Snackable</a></li>
-                <li><a href="#bake">Baking Stars</a></li>
-                <li><a href="#jam">Jam & Preserves</a></li>
-                <li><a href="#drink">Smoothies & Drinks</a></li>
-                <li><a href="#savory">Savory Pairings</a></li>
+                <li><a href="#snack" data-i18n="useSnackable">Snackable</a></li>
+                <li><a href="#bake" data-i18n="useBaking">Baking Stars</a></li>
+                <li><a href="#jam" data-i18n="useJam">Jam & Preserves</a></li>
+                <li><a href="#drink" data-i18n="useDrinks">Smoothies & Drinks</a></li>
+                <li><a href="#savory" data-i18n="useSavory">Savory Pairings</a></li>
               </ul>
 
               <details>
-                <summary>Season & Climate</summary>
+                <summary data-i18n="seasonClimate">Season & Climate</summary>
                 <ul>
-                  <li><a href="#spring">Spring picks</a></li>
-                  <li><a href="#summer">Summer peak</a></li>
-                  <li><a href="#autumn">Autumn harvest</a></li>
-                  <li><a href="#winter">Frozen favorites</a></li>
-                  <li><a href="#nordic">Nordic hardy berries</a></li>
-                </ul>
-              </details>
-
-              <details>
-                <summary>Kitchen Skills</summary>
-                <ul>
-                  <li><a href="#freeze">Freeze without mush</a></li>
-                  <li><a href="#jamset">How to get jam to set</a></li>
-                  <li><a href="#syrup">Quick berry syrup</a></li>
-                  <li><a href="#compote">Fast compote</a></li>
-                  <li><a href="#pairing">Flavor pairing map</a></li>
+                  <li><a href="#spring" data-i18n="seasonSpring">Spring picks</a></li>
+                  <li><a href="#summer" data-i18n="seasonSummer">Summer peak</a></li>
+                  <li><a href="#autumn" data-i18n="seasonAutumn">Autumn harvest</a></li>
+                  <li><a href="#winter" data-i18n="seasonWinter">Frozen favorites</a></li>
+                  <li>
+                    <a href="#nordic" data-i18n="seasonNordic">Nordic hardy berries</a>
+                  </li>
                 </ul>
               </details>
 
               <details>
-                <summary>Safety & Notes</summary>
+                <summary data-i18n="kitchenSkills">Kitchen Skills</summary>
                 <ul>
-                  <li><a href="#allergy">Allergy notes</a></li>
-                  <li><a href="#pets">Berries & pets</a></li>
-                  <li><a href="#forage-safety">Foraging safety</a></li>
-                  <li><a href="#pesticide">Washing & pesticide tips</a></li>
+                  <li>
+                    <a href="#freeze" data-i18n="skillFreeze">Freeze without mush</a>
+                  </li>
+                  <li>
+                    <a href="#jamset" data-i18n="skillJamSet">How to get jam to set</a>
+                  </li>
+                  <li><a href="#syrup" data-i18n="skillSyrup">Quick berry syrup</a></li>
+                  <li><a href="#compote" data-i18n="skillCompote">Fast compote</a></li>
+                  <li>
+                    <a href="#pairing" data-i18n="skillPairing">Flavor pairing map</a>
+                  </li>
+                </ul>
+              </details>
+
+              <details>
+                <summary data-i18n="safetyNotes">Safety & Notes</summary>
+                <ul>
+                  <li><a href="#allergy" data-i18n="safetyAllergy">Allergy notes</a></li>
+                  <li><a href="#pets" data-i18n="safetyPets">Berries & pets</a></li>
+                  <li>
+                    <a href="#forage-safety" data-i18n="safetyForaging"
+                      >Foraging safety</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#pesticide" data-i18n="safetyWashing"
+                      >Washing & pesticide tips</a
+                    >
+                  </li>
                 </ul>
               </details>
             </aside>
           </div>
 
           <ul class="nav-links">
-            <li><a href="#">True berries</a></li>
-            <li><a href="#">Botanical berries</a></li>
-            <li><a href="#">Aggregate berries</a></li>
-            <li><a href="#">Hybrid berries</a></li>
-            <li><a href="#">Regional berries</a></li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="navTrue">True berries</a>
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="navBotanical"
+                >Botanical berries</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="navAggregate"
+                >Aggregate berries</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="navHybrid">Hybrid berries</a>
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="navRegional"
+                >Regional berries</a
+              >
+            </li>
           </ul>
           <button
             class="nav-burger"
@@ -157,239 +232,625 @@
             </button>
 
             <ul class="nav-mobile-links">
-              <li><a href="#">True berries</a></li>
-              <li><a href="#">Botanical berries</a></li>
-              <li><a href="#">Aggregate berries</a></li>
-              <li><a href="#">Hybrid berries</a></li>
-              <li><a href="#">Regional berries</a></li>
+              <li><a href="#" data-i18n="navTrue">True berries</a></li>
+              <li><a href="#" data-i18n="navBotanical">Botanical berries</a></li>
+              <li><a href="#" data-i18n="navAggregate">Aggregate berries</a></li>
+              <li><a href="#" data-i18n="navHybrid">Hybrid berries</a></li>
+              <li><a href="#" data-i18n="navRegional">Regional berries</a></li>
             </ul>
           </div>
         </nav>
       </header>
       <div class="subheader">
-        <p>Unsure on what berry you are looking for? Try this <a href="#">quiz</a>!</p>
+        <p>
+          <span data-i18n="quizTextBefore"
+            >Unsure on what berry you are looking for? Try this</span
+          >
+          <a href="#" data-placeholder="true" data-i18n="quizLink">quiz</a>
+        </p>
       </div>
     </div>
     <div class="page-wrapper">
       <aside class="sidebar-left" aria-label="Sidebar navigation">
         <details>
-          <summary>About & Guides</summary>
+          <summary data-i18n="aboutGuides">About & Guides</summary>
           <ul>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Berries Care Guide</a></li>
-            <li><a href="#">Foraging Basics</a></li>
-            <li><a href="#">Sustainability</a></li>
-            <li><a href="#">FAQs</a></li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="ourStory">Our Story</a>
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="berriesCareGuide"
+                >Berries Care Guide</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="foragingBasics"
+                >Foraging Basics</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="sustainability"
+                >Sustainability</a
+              >
+            </li>
+            <li><a href="#" data-placeholder="true" data-i18n="faqs">FAQs</a></li>
           </ul>
         </details>
-        <h3>Berry Families</h3>
+        <h3 data-i18n="berryFamilies">Berry Families</h3>
         <ul>
-          <li><a href="#true">True berries</a></li>
-          <li><a href="#botanical">Botanical berries</a></li>
-          <li><a href="#aggregate">Aggregate berries</a></li>
-          <li><a href="#hybrid">Hybrid berries</a></li>
-          <li><a href="#regional">Regional berries</a></li>
+          <li>
+            <a href="#" data-placeholder="true" data-i18n="navTrue">True berries</a>
+          </li>
+          <li>
+            <a href="#" data-placeholder="true" data-i18n="navBotanical"
+              >Botanical berries</a
+            >
+          </li>
+          <li>
+            <a href="#" data-placeholder="true" data-i18n="navAggregate"
+              >Aggregate berries</a
+            >
+          </li>
+          <li>
+            <a href="#" data-placeholder="true" data-i18n="navHybrid">Hybrid berries</a>
+          </li>
+          <li>
+            <a href="#" data-placeholder="true" data-i18n="navRegional"
+              >Regional berries</a
+            >
+          </li>
         </ul>
 
-        <h3>Browse by Taste</h3>
+        <h3 data-i18n="browseByTaste">Browse by Taste</h3>
         <ul>
-          <li><a href="#sweet">Sweet & Juicy</a></li>
-          <li><a href="#tart">Bright & Tart</a></li>
-          <li><a href="#floral">Floral & Perfumed</a></li>
-          <li><a href="#deep">Deep & Jammy</a></li>
-          <li><a href="#wild">Wild & Resinous</a></li>
+          <li>
+            <a href="#" data-placeholder="true" data-i18n="tasteSweet">Sweet & Juicy</a>
+          </li>
+          <li>
+            <a href="#" data-placeholder="true" data-i18n="tasteTart">Bright & Tart</a>
+          </li>
+          <li>
+            <a href="#" data-placeholder="true" data-i18n="tasteFloral"
+              >Floral & Perfumed</a
+            >
+          </li>
+          <li>
+            <a href="#" data-placeholder="true" data-i18n="tasteDeep">Deep & Jammy</a>
+          </li>
+          <li>
+            <a href="#" data-placeholder="true" data-i18n="tasteWild">Wild & Resinous</a>
+          </li>
         </ul>
 
-        <h3>Use Cases</h3>
+        <h3 data-i18n="useCases">Use Cases</h3>
         <ul>
-          <li><a href="#snack">Snackable</a></li>
-          <li><a href="#bake">Baking Stars</a></li>
-          <li><a href="#jam">Jam & Preserves</a></li>
-          <li><a href="#drink">Smoothies & Drinks</a></li>
-          <li><a href="#savory">Savory Pairings</a></li>
+          <li>
+            <a href="#" data-placeholder="true" data-i18n="useSnackable">Snackable</a>
+          </li>
+          <li>
+            <a href="#" data-placeholder="true" data-i18n="useBaking">Baking Stars</a>
+          </li>
+          <li>
+            <a href="#" data-placeholder="true" data-i18n="useJam">Jam & Preserves</a>
+          </li>
+          <li>
+            <a href="#" data-placeholder="true" data-i18n="useDrinks"
+              >Smoothies & Drinks</a
+            >
+          </li>
+          <li>
+            <a href="#" data-placeholder="true" data-i18n="useSavory">Savory Pairings</a>
+          </li>
         </ul>
 
         <details>
-          <summary>Season & Climate</summary>
+          <summary data-i18n="seasonClimate">Season & Climate</summary>
           <ul>
-            <li><a href="#spring">Spring picks</a></li>
-            <li><a href="#summer">Summer peak</a></li>
-            <li><a href="#autumn">Autumn harvest</a></li>
-            <li><a href="#winter">Frozen favorites</a></li>
-            <li><a href="#nordic">Nordic hardy berries</a></li>
-          </ul>
-        </details>
-        <details>
-          <summary>Kitchen Skills</summary>
-          <ul>
-            <li><a href="#freeze">Freeze without mush</a></li>
-            <li><a href="#jamset">How to get jam to set</a></li>
-            <li><a href="#syrup">Quick berry syrup</a></li>
-            <li><a href="#compote">Fast compote</a></li>
-            <li><a href="#pairing">Flavor pairing map</a></li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="seasonSpring"
+                >Spring picks</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="seasonSummer">Summer peak</a>
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="seasonAutumn"
+                >Autumn harvest</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="seasonWinter"
+                >Frozen favorites</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="seasonNordic"
+                >Nordic hardy berries</a
+              >
+            </li>
           </ul>
         </details>
 
         <details>
-          <summary>Safety & Notes</summary>
+          <summary data-i18n="kitchenSkills">Kitchen Skills</summary>
           <ul>
-            <li><a href="#allergy">Allergy notes</a></li>
-            <li><a href="#pets">Berries & pets</a></li>
-            <li><a href="#forage-safety">Foraging safety</a></li>
-            <li><a href="#pesticide">Washing & pesticide tips</a></li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="skillFreeze"
+                >Freeze without mush</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="skillJamSet"
+                >How to get jam to set</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="skillSyrup"
+                >Quick berry syrup</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="skillCompote"
+                >Fast compote</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="skillPairing"
+                >Flavor pairing map</a
+              >
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary data-i18n="safetyNotes">Safety & Notes</summary>
+          <ul>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="safetyAllergy"
+                >Allergy notes</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="safetyPets"
+                >Berries & pets</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="safetyForaging"
+                >Foraging safety</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="safetyWashing"
+                >Washing & pesticide tips</a
+              >
+            </li>
           </ul>
         </details>
       </aside>
       <main>
         <section id="start">
-          <h1>hello there</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
+          <h1 data-i18n="introTitle">Discover the World of Berries</h1>
+          <p data-i18n="introText1">
+            From wild forest finds to cultivated garden favorites, berries are among
+            nature’s most versatile treasures. Sweet, tart, floral, deep, or delicately
+            jammy, each berry carries its own character, season, and story. Some are
+            botanically true berries, others earn the name through tradition, yet all
+            offer something distinct in flavor, texture, and use.
+          </p>
+          <div class="slideshow-container">
+            <div class="mySlides" id="track">
+              <img src="../images/img1.jpg" />
+              <img src="../images/img2.jpg" />
+              <img src="../images/img3.jpg" />
+            </div>
+          </div>
+          <section id="berrylab">
+            <h2 data-i18n="berryList">Berry list</h2>
+
+            <form class="berry-form" aria-label="Add berry">
+              <input
+                id="berryName"
+                type="text"
+                data-i18n-placeholder="berryNamePlaceholder"
+                placeholder="Berry name"
+              />
+              <select id="berryType">
+                <option value="true" data-i18n="type_true">True berry</option>
+                <option value="botanical" data-i18n="type_botanical">Botanical</option>
+                <option value="aggregate" data-i18n="type_aggregate">Aggregate</option>
+                <option value="hybrid" data-i18n="type_hybrid">Hybrid</option>
+                <option value="regional" data-i18n="type_regional">Regional</option>
+              </select>
+              <button type="submit" data-i18n="add">Add</button>
+              <p class="berry-msg" aria-live="polite"></p>
+            </form>
+
+            <div class="berry-tools">
+              <input
+                id="berrySearch"
+                type="search"
+                data-i18n-placeholder="searchPlaceholder"
+                placeholder="Search berries..."
+              />
+              <select id="berrySort" aria-label="Sort berries">
+                <option value="az" data-i18n="sortAZ">Sort A–Z</option>
+                <option value="za" data-i18n="sortZA">Sort Z–A</option>
+              </select>
+            </div>
+
+            <p class="berry-empty" hidden data-i18n="noBerries">
+              No berries yet. Add one above!
+            </p>
+            <ul class="berry-list" aria-label="Berry list"></ul>
+          </section>
+          <article
+            class="content-block content-block--start"
+            aria-label="Berry introduction extended"
+          >
+            <h2>Why Berries Feel Like Magic</h2>
+            <p>
+              Berries sit at a strange and wonderful crossroads: they’re everyday and
+              mythical at the same time. One moment they are a quick snack on a busy
+              morning, the next they are a symbol of summer, forests, jam jars, and sticky
+              fingers. They show up in desserts and in savory cooking, in traditional
+              medicine, in folklore, in survival stories, and in modern science. If you’ve
+              ever noticed how a single berry can taste like sunshine or like sharp green
+              leaves, you already understand why people keep coming back to them. This
+              page is a long wander through that world—texture, flavor, nature, history,
+              and the cautious side of foraging.
+            </p>
+            <section aria-label="Berry basics and what we mean by berry">
+              <h3>What Even Counts as a “Berry”?</h3>
+              <p>
+                “Berry” is one of those words that feels simple until you actually try to
+                define it. In everyday life, most people mean “small, juicy fruit that
+                grows in clusters or on shrubs” and is usually sweet or tart. In botany,
+                the rules are different. A botanical berry is a fleshy fruit made from a
+                single ovary, typically with multiple seeds inside. By that definition,
+                grapes and tomatoes qualify, and strawberries do not. Strawberries are
+                “aggregate fruits,” built from many tiny parts, and raspberries are a
+                collection of little drupelets that pull away from the core. Then there
+                are “true berries” in culinary speech, and “false berries” in older
+                guides, and “not technically berries” berries that still belong at the
+                center of your bowl.
+              </p>
+                <figure class="content-block__figure">
+                  <img
+                    src="../images/filler.png"
+                    alt="Assorted berries in close-up"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    Color is not just decoration: berry pigments often signal ripeness to
+                    animals and help plants handle sun stress. In the kitchen, those
+                    pigments become stains, sauces, and dramatic swirls in yogurt, cream,
+                    and icing.
+                  </figcaption>
+                </figure>
+              <p>
+                The fun part is that you don’t need to memorize the categories to enjoy
+                them. These terms become helpful when you’re comparing texture, storage,
+                and cooking behavior. A blueberry can keep its shape in a muffin because
+                its skin and structure hold together differently than an aggregate berry
+                like raspberry, which collapses easily into sauce. Some berries we treat
+                like candy are actually powerful little chemical factories—pigments,
+                acids, aromatics, and sugars arranged in ways that plants evolved for
+                protection and seed dispersal. When you taste “bright and tart,” you’re
+                tasting the plant’s strategy.
+              </p>
+              <p>
+                Across cultures, berries show up where people want color and brightness.
+                They’re easy to love because they are naturally portioned. They also
+                preserve well compared to many fruits: dried, cooked into jam, fermented,
+                frozen, or turned into syrups and cordials. In colder climates, berries
+                have a particular emotional power because they represent the short season
+                when sunlight is generous. The act of preserving berries becomes a way to
+                trap that season in a jar and open it later.
+              </p>
+              <p>
+                And berries are social. People pick them together. They trade them. They
+                argue about the best way to make jam set, or whether a pie should be sweet
+                or sharp. Family recipes cling to berries because berries are one of the
+                easiest “luxury flavors” to make at home. Even when money is tight, a
+                handful of berries can make a bowl of oats feel special, or make plain
+                yogurt taste like dessert.
+              </p>
+            </section>
+          </article>
         </section>
         <section id="middle">
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
+          <div class="gallery-container">
+            <div class="gallerySlide galleryFade">
+              <img src="../images/pic1.jpg" />
+              <div class="galleryText">
+                Try out our lovely dessert recipes! Filled with thousands of different
+                types of combinations for your berries.
+              </div>
+            </div>
+
+            <div class="gallerySlide galleryFade">
+              <img src="../images/pic2.jpg" />
+              <div class="galleryText2Border">
+                <div class="galleryText2">
+                  🍓🫐🍒 <br />
+                  ⭐Explore it all⭐<br />🍰🥐🍪
+                </div>
+              </div>
+            </div>
+
+            <div class="gallerySlide galleryFade">
+              <img src="../images/pic3.jpg" />
+              <div class="galleryText3Border">
+                <div class="galleryText3">Updates every day!</div>
+              </div>
+            </div>
+
+            <a class="galleryPrev" onclick="plusGallery(-1)">&#10094;</a>
+            <a class="galleryNext" onclick="plusGallery(1)">&#10095;</a>
+          </div>
+
+          <br />
+
+          <div>
+            <span class="galleryDot" onclick="currentGallery(1)"></span>
+            <span class="galleryDot" onclick="currentGallery(2)"></span>
+            <span class="galleryDot" onclick="currentGallery(3)"></span>
+          </div>
+
+          <section aria-label="Safety and caution">
+            <h3>The Cautious Side: Poison, Lookalikes, and Common Mistakes</h3>
+            <p>
+              It’s important to say this clearly: not every small colorful fruit is food.
+              Many plants make berries that are meant to be a warning, not an invitation.
+              Some toxic berries look delicious on purpose, because the plant benefits if
+              the “wrong” animal leaves it alone while the “right” animal spreads the
+              seeds. And some lookalikes happen because nature repeats shapes. If you
+              forage, you should only eat what you can identify with high confidence.
+              Guessing is not a vibe.
+            </p>
+            <p>
+              The most common mistake beginners make is trusting color. Red is not
+              automatically dangerous, and blue is not automatically safe. Another mistake
+              is trusting a single clue (“it grows near water,” “it has five petals,”
+              “birds eat it”). Birds can eat berries humans can’t. And some plants have
+              edible parts and toxic parts, which makes casual “rules” risky. This page
+              can be playful about berries, but safety is one place to be boring and
+              strict.
+            </p>
+
+            <aside
+              class="content-block__aside content-block__aside--warning"
+              aria-label="Foraging warning"
+            >
+              <h4>Foraging safety checklist (boring on purpose)</h4>
+              <ol>
+                <li>
+                  <strong>Use multiple identifiers</strong>: leaf shape, stem,
+                  arrangement, habitat, season, fruit structure.
+                </li>
+                <li>
+                  <strong>Learn lookalikes</strong> before you learn “the good one.”
+                </li>
+                <li>
+                  <strong>When in doubt, don’t eat it</strong>. Take a photo and research
+                  later.
+                </li>
+                <li>
+                  <strong>Start small</strong> even with safe species; some people react
+                  to new foods.
+                </li>
+                <li>
+                  <strong>Keep berries separate</strong> while picking so one unknown
+                  berry can’t contaminate a bowl.
+                </li>
+              </ol>
+              <p>
+                This is general safety guidance, not medical advice. If you suspect
+                poisoning, contact local emergency services or poison control.
+              </p>
+            </aside>
+          </section>
         </section>
+
         <section id="end">
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
-          <h1>hello there</h1>
+          <section aria-label="Flavor map and texture">
+            <h3>A Tiny Flavor Map: Sweet, Tart, Floral, Deep, Wild</h3>
+            <p>
+              People describe berries with words that sound like perfumes: floral,
+              perfumed, jammy, resinous. That’s because berries have extremely expressive
+              aromas. A strawberry smells “red.” A blackcurrant can smell green and sharp,
+              almost like crushed leaves. A cloudberry can smell honeyed and tropical in a
+              way that surprises anyone expecting a standard “berry” vibe. And then you
+              have the dark-fruit family—blackberries, elderberries, certain blueberries—
+              that lean toward wine notes, cocoa-like bitterness, and a slow, velvety
+              finish.
+            </p>
+            <p>
+              Texture matters as much as flavor. The pop of a blueberry skin, the crumble
+              of a raspberry, the watery snap of a grape, the seed crunch in a
+              blackberry—these are design choices made by evolution. In cooking, texture
+              decides whether you want a berry whole, mashed, or cooked low and slow. If
+              you want clean pieces of fruit in a cake, you choose berries that resist
+              collapsing. If you want a sauce that turns glossy, you choose berries with
+              lots of natural pectin and the right acid balance. And if you want a compote
+              that feels luxurious, you mix varieties so the spoon finds both soft and
+              firm bites.
+            </p>
+          </section>
+
+          <aside class="content-block__aside" aria-label="Quick tips">
+            <h4>Quick kitchen rules that make berries behave</h4>
+            <ul>
+              <li>
+                <strong>Cold berries keep their shape</strong> better in batters;
+                room-temp berries bleed faster.
+              </li>
+              <li>
+                <strong>Acid brightens</strong> (lemon, lime, mild vinegars), but too much
+                can mute floral notes.
+              </li>
+              <li>
+                <strong>Salt is a cheat code</strong> in tiny amounts: it makes sweetness
+                read louder.
+              </li>
+              <li>
+                <strong>Sugar is not just sweetness</strong>; it pulls water out and helps
+                create syrupy texture.
+              </li>
+              <li>
+                <strong>Heat changes aroma</strong>; some berries become rounder, others
+                lose their top notes.
+              </li>
+            </ul>
+          </aside>
+          <section aria-label="Nature and ecology">
+            <h3>Berries in Nature: Who Eats Them and Why?</h3>
+            <p>
+              A berry plant is basically a marketing department for seeds. It invests
+              energy into sweetness, color, and scent so that animals will carry its seeds
+              away. Birds love bright berries because color is an obvious signal from the
+              air. Mammals often rely more on smell and availability. In northern forests,
+              berry season is a calendar event for wildlife. When berries flood the
+              undergrowth, animals bulk up. When the crop fails, everything
+              changes—movement patterns, competition, even how bold certain animals become
+              near human areas.
+            </p>
+            <p>
+              In a healthy ecosystem, berries are a chain reaction. Flowers feed
+              pollinators; pollinators help fruit set; fruit feeds animals; animals spread
+              seeds; shrubs stabilize soil; leaf litter becomes habitat. Many berry shrubs
+              also form relationships underground with fungi (mycorrhiza), exchanging
+              sugars for mineral access. This is one reason wild berries can taste
+              intense: the plant is interacting with a complex soil community instead of
+              living in a simplified field. It’s not “better” or “worse,” just different
+              chemistry born from different stress and nutrient patterns.
+            </p>
+          </section>
         </section>
       </main>
       <aside class="sidebar-right" aria-label="Sidebar links">
         <ul>
-          <li><a href="#start">Start</a></li>
-          <li><a href="#middle">Middle</a></li>
-          <li><a href="#end">End</a></li>
+          <li><a href="#start" data-i18n="sideStart">Start</a></li>
+          <li><a href="#middle" data-i18n="sideMiddle">Middle</a></li>
+          <li><a href="#end" data-i18n="sideEnd">End</a></li>
         </ul>
       </aside>
     </div>
     <section class="signup-section">
-      <h2>Be the First to Know</h2>
+      <h2 data-i18n="signupTitle">Be the First to Know</h2>
       <p>
-        Stay up to date with our new cup styles and seasonal collections. Plus, enjoy 21%
-        off your first order!
+        <span data-i18n="signupText"
+          >Stay up to date with our new cup styles and seasonal collections. Plus, enjoy
+          21% off your first order!</span
+        >
       </p>
-      <form class="signup-form" aria-label="Email sign-up">
+      <form class="signup-form" aria-label="Email sign-up" novalidate>
         <input
+          id="mail"
           type="email"
+          data-i18n-placeholder="emailPlaceholder"
           placeholder="Enter your email address"
           aria-label="Email address"
         />
-        <button type="submit">Sign Up</button>
+        <button type="submit" data-i18n="signUp">Sign Up</button>
+        <p id="error" class="form-message" aria-live="polite"></p>
       </form>
     </section>
     <section class="info-columns">
       <div class="info-grid">
         <div>
-          <h3>Customer Service</h3>
+          <h3 data-i18n="infoCustomerService">Customer Service</h3>
           <ul>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Shipping & Delivery</a></li>
-            <li><a href="#">Returns & Exchanges</a></li>
-            <li><a href="#">Warranty</a></li>
-            <li><a href="#">Resources</a></li>
-            <li><a href="#">FAQs</a></li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="csContact">Contact Us</a>
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="csShipping"
+                >Shipping & Delivery</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="csReturns"
+                >Returns & Exchanges</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="csWarranty">Warranty</a>
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="csResources">Resources</a>
+            </li>
+            <li><a href="#" data-placeholder="true" data-i18n="faqs">FAQs</a></li>
           </ul>
         </div>
 
         <div>
-          <h3>Shop</h3>
+          <h3 data-i18n="infoShop">Shop</h3>
           <ul>
-            <li><a href="#">All Products</a></li>
-            <li><a href="#">Best Sellers</a></li>
-            <li><a href="#">New Arrivals</a></li>
-            <li><a href="#">Gift Sets</a></li>
-            <li><a href="#">Special Offers</a></li>
-            <li><a href="#">Outlet</a></li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="shopAll">All Products</a>
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="shopBest">Best Sellers</a>
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="shopNew">New Arrivals</a>
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="shopGifts">Gift Sets</a>
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="shopOffers"
+                >Special Offers</a
+              >
+            </li>
+            <li><a href="#" data-placeholder="true" data-i18n="shopOutlet">Outlet</a></li>
           </ul>
         </div>
         <div>
-          <h3>Community</h3>
+          <h3 data-i18n="infoCommunity">Community</h3>
           <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Pinterest</a></li>
-            <li><a href="#">TikTok</a></li>
-            <li><a href="#">Facebook</a></li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="commInstagram">Instagram</a>
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="commPinterest">Pinterest</a>
+            </li>
+            <li><a href="#" data-placeholder="true" data-i18n="commTikTok">TikTok</a></li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="commFacebook">Facebook</a>
+            </li>
           </ul>
         </div>
 
         <div>
-          <h3>Corporate</h3>
+          <h3 data-i18n="infoCorporate">Corporate</h3>
           <ul>
-            <li><a href="#">Business Sales</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Cookie Settings</a></li>
-            <li><a href="#">Legal Notice</a></li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="corpBusiness"
+                >Business Sales</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="corpTerms"
+                >Terms of Service</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="corpPrivacy"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="corpCookies"
+                >Cookie Settings</a
+              >
+            </li>
+            <li>
+              <a href="#" data-placeholder="true" data-i18n="corpLegal">Legal Notice</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -397,19 +858,33 @@
 
     <footer>
       <p>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-        <a href="#">Your Privacy Choices</a>
-        <a href="#">California Transparency in Supply Chains Act</a>
-        <a href="#"> Community Participation Guidelines</a>
+        <a href="#" data-placeholder="true" data-i18n="corpPrivacy">Privacy Policy</a>
+        <a href="#" data-placeholder="true" data-i18n="footerTerms">Terms of Use</a>
+        <a href="#" data-placeholder="true" data-i18n="footerChoices"
+          >Your Privacy Choices</a
+        >
+        <a href="#" data-placeholder="true" data-i18n="footerTransparency">
+          California Transparency in Supply Chains Act
+        </a>
+        <a href="#" data-placeholder="true" data-i18n="footerCommunity">
+          Community Participation Guidelines
+        </a>
       </p>
       <div class="legal">
         <p>
-          ©2025 Berries Co. All rights reserved. Berries® is a registered trademark of
-          Berries Co. AB.
+          <span data-i18n="footerLegal"
+            >©2025 Berries Co. All rights reserved. Berries® is a registered trademark of
+            Berries Co. AB.</span
+          >
         </p>
       </div>
     </footer>
+    <div id="fakeLoader" class="fake-loader" hidden aria-hidden="true">
+      <p class="fake-loader__status" role="status" aria-live="polite">
+        <span class="fake-loader__anim">Loading…</span>
+      </p>
+    </div>
+
     <script type="module" src="../js/main.js"></script>
   </body>
 </html>

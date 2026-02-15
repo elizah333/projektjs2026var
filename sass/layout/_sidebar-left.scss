@@ -6,17 +6,12 @@
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
   align-self: start;
-  overflow: auto;
-  overflow-x: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
   padding: var(--space-2);
-  background: linear-gradient(
-    to right,
-    var(--lines) 0,
-    var(--lines) 28px,
-    transparent 30px
-  );
   @include box;
-    scrollbar-color: var(--primary) var(--lines) ;
+  scrollbar-color: var(--primary) var(--lines);
+  direction: rtl;
 }
 
 .sidebar-left details {
@@ -24,19 +19,19 @@
   background-color: var(--muted);
   padding: 1px;
   text-align: start;
+  direction: ltr;
 }
 
 .sidebar-left details + details {
   border-top: 1px solid var(--lines);
 }
 .sidebar-left h3 {
-  color: var(--lines);
   font-size: 1.3rem;
   padding-left: 20px;
+  direction: ltr;
   text-align: start;
 }
 .sidebar-left a {
-  color: var(--lines);
   padding: 2px;
   font-size: 1.2rem;
   text-decoration: none;
@@ -45,11 +40,11 @@
   list-style: none;
   margin-left: 0;
   padding-left: 20px;
+  direction: ltr;
 }
 .sidebar-left li {
   margin-bottom: 4px;
   text-align: start;
-
   font-weight: 500;
   a:hover {
     text-decoration: underline;
@@ -66,7 +61,6 @@
   padding-left: 30px;
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--lines);
   cursor: pointer;
   background: linear-gradient(
     to right,
@@ -124,10 +118,9 @@
   .sidebar-overlay {
     display: none;
     position: fixed;
-
     inset: 0;
     z-index: 10000;
-    padding: 16px;
+    padding: var(--space-2);
     background-color: var(--bg);
   }
 
@@ -145,12 +138,10 @@
       font-weight: 500;
     }
     h3 {
-      color: var(--lines);
       font-size: 1.3rem;
       padding-left: 20px;
     }
     a {
-      color: var(--lines);
       padding: 2px;
       font-size: 1.2rem;
       font-weight: 400;
@@ -162,7 +153,6 @@
     font-size: 40px;
     line-height: 1;
     background: transparent;
-    color: var(--lines);
     cursor: pointer;
     margin-left: auto;
     display: block;
