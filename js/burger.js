@@ -39,6 +39,10 @@ function setupOverlayMenu({
     a.addEventListener('click', closeMenu);
   });
 
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeMenu();
+  });
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
       closeMenu();
@@ -47,14 +51,19 @@ function setupOverlayMenu({
 }
 
 export function initBurgerMenu() {
-  const nav = document.querySelector('.site-nav');
-  if (!nav) return;
-
   setupOverlayMenu({
-    root: nav,
+    root: document,
     openBtnSelector: '.nav-burger',
-    overlaySelector: '.nav-overlay',
+    overlaySelector: '#mobileNav',
     closeBtnSelector: '.nav-close',
     bodyClass: 'nav-open',
+  });
+
+  setupOverlayMenu({
+    root: document,
+    openBtnSelector: '.sidebar-burger',
+    overlaySelector: '#mobileSidebar',
+    closeBtnSelector: '.sidebar-close',
+    bodyClass: 'sidebar-open',
   });
 }
